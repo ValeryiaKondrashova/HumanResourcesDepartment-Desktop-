@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="280.0" prefWidth="450.0" style="-fx-background-color: #2E3348;" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hr.hr.SavingFileController">
+   <children>
+      <Text fill="DARKORANGE" layoutX="76.0" layoutY="123.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Выписка о больничных" wrappingWidth="297.46533203125">
+         <font>
+            <Font name="Corbel Bold" size="28.0" />
+         </font>
+      </Text>
+      <TextField fx:id="field_unCorrect_nameFile" layoutX="115.0" layoutY="227.0" prefHeight="38.0" prefWidth="288.0" style="-fx-background-color: #2E3348;">
+         <font>
+            <Font name="Corbel" size="19.0" />
+         </font>
+      </TextField>
+      <Text fill="DARKORANGE" layoutX="110.0" layoutY="166.0" strokeType="OUTSIDE" strokeWidth="0.0" text="успешно создана!" wrappingWidth="228.0653076171875">
+         <font>
+            <Font name="Corbel Bold" size="28.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>

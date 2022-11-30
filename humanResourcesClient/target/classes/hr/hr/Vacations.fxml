@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="610.0" prefWidth="900.0" style="-fx-background-color: #2E3348;" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hr.hr.VacationsController">
+    <children>
+        <AnchorPane layoutX="1.0" layoutY="65.0" prefHeight="545.0" prefWidth="900.0" style="-fx-background-color: #fafafa;">
+         <children>
+            <TableView fx:id="table_vacations" prefHeight="420.0" prefWidth="900.0">
+              <columns>
+                <TableColumn fx:id="id_column_vacation" prefWidth="77.6000030040741" text="ID" />
+                <TableColumn fx:id="last_name_column" prefWidth="244.00001525878906" text="Фамилия" />
+                  <TableColumn fx:id="startVacation_column" minWidth="8.79998779296875" prefWidth="270.39996337890625" text="Начало отпуска" />
+                  <TableColumn fx:id="endVacation_column" minWidth="1.5999755859375" prefWidth="308.0" text="Конец отпуска" />
+              </columns>
+            </TableView>
+            <AnchorPane layoutY="419.0" prefHeight="126.0" prefWidth="900.0" style="-fx-background-color: #ff9932;">
+               <children>
+                  <Button fx:id="button_exit_byUser" layoutX="735.0" layoutY="73.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="144.0" style="-fx-background-color: #2E3348;" text="Выход" textFill="#fafafa">
+                     <font>
+                        <Font name="Corbel" size="24.0" />
+                     </font>
+                  </Button>
+                  <TextField fx:id="field_unCorrect_byUser" layoutX="144.0" layoutY="60.0" prefHeight="28.0" prefWidth="273.0" style="-fx-background-color: #ff9932;">
+                     <font>
+                        <Font name="Corbel" size="15.0" />
+                     </font>
+                  </TextField>
+                  <Button fx:id="button_back" blendMode="MULTIPLY" cache="true" layoutX="18.0" layoutY="66.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="44.0" textFill="#fafafa">
+                     <font>
+                        <Font name="Corbel" size="24.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../image/line_left.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+            </AnchorPane>
+         </children>
+        </AnchorPane>
+        <Line endX="900.0000610351562" endY="535.0" layoutY="9.0" startY="535.0" stroke="#2e3348" strokeWidth="3.0" />
+        <Button fx:id="button_view_vacation" layoutX="38.0" layoutY="14.0" mnemonicParsing="false" style="-fx-background-color: #2E3348;" text="Просмотр" textFill="#fafafa">
+            <font>
+                <Font name="Corbel" size="24.0" />
+            </font>
+        </Button>
+        <Button fx:id="button_add_vacation" layoutX="181.0" layoutY="13.0" mnemonicParsing="false" onAction="#ShowDialogAdd" style="-fx-background-color: #2E3348;" text="Добавить" textFill="#fafafa">
+            <font>
+                <Font name="Corbel" size="24.0" />
+            </font>
+        </Button>
+        <Button fx:id="button_delete_vacation" layoutX="315.0" layoutY="12.0" mnemonicParsing="false" style="-fx-background-color: #2E3348;" text="Удалить" textFill="#fafafa">
+            <font>
+                <Font name="Corbel" size="24.0" />
+            </font>
+        </Button>
+      <TextField fx:id="filterField" layoutX="639.0" layoutY="20.0" prefHeight="28.0" prefWidth="235.0" promptText="Поиск" style="-fx-background-color: #fafafa;">
+         <font>
+            <Font name="Corbel Italic" size="15.0" />
+         </font></TextField>
+    </children>
+</AnchorPane>

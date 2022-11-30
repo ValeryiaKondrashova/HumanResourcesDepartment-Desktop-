@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="457.0" prefWidth="440.0" style="-fx-background-color: #2E3348;" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hr.hr.AddVacationController">
+   <children>
+      <Line endX="339.0" endY="-7.62939453125E-6" layoutX="101.0" layoutY="75.0" startX="-100.0" strokeWidth="2.0" />
+      <Text fill="#fafafa" layoutX="22.0" layoutY="49.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Отпуск сотрудников">
+         <font>
+            <Font name="Corbel" size="30.0" />
+         </font>
+      </Text>
+      <Text fill="DARKORANGE" layoutX="29.0" layoutY="122.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Сотрудник">
+         <font>
+            <Font name="Corbel" size="21.0" />
+         </font>
+      </Text>
+      <Text fill="DARKORANGE" layoutX="28.0" layoutY="180.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Начало отпуска">
+         <font>
+            <Font name="Corbel" size="21.0" />
+         </font>
+      </Text>
+      <Text fill="DARKORANGE" layoutX="28.0" layoutY="224.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Окончание отпуска" wrappingWidth="151.65948486328125">
+         <font>
+            <Font name="Corbel" size="21.0" />
+         </font>
+      </Text>
+      <TextField fx:id="endVacation_add" layoutX="182.0" layoutY="211.0" prefHeight="26.0" prefWidth="218.0" />
+      <TextField fx:id="startVacation_add" layoutX="182.0" layoutY="162.0" prefHeight="26.0" prefWidth="218.0" />
+      <Button fx:id="add_add" layoutX="116.0" layoutY="387.0" mnemonicParsing="false" onAction="#Add" prefHeight="47.0" prefWidth="207.0" style="-fx-background-color: #FF8C00;" text="Сохранить" textFill="#fafafa">
+         <font>
+            <Font name="Corbel" size="25.0" />
+         </font>
+      </Button>
+      <TextField fx:id="qw_field" layoutX="10.0" layoutY="339.0" prefHeight="38.0" prefWidth="418.0" style="-fx-background-color: #2E3348;">
+         <font>
+            <Font name="Corbel" size="20.0" />
+         </font>
+      </TextField>
+      <ComboBox fx:id="employee_ComboBox" layoutX="182.0" layoutY="103.0" onAction="#SelectEmployee" prefHeight="26.0" prefWidth="218.0" />
+      <Label fx:id="label" layoutX="346.0" layoutY="411.0" textFill="#e5e1e1" />
+   </children>
+</AnchorPane>

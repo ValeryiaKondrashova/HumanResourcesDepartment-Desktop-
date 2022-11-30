@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="610.0" prefWidth="900.0" style="-fx-background-color: #2E3348;" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hr.hr.MainUserController">
+    <children>
+        <AnchorPane layoutX="1.0" layoutY="65.0" prefHeight="545.0" prefWidth="900.0" style="-fx-background-color: #fafafa;">
+         <children>
+            <TableView fx:id="table_employees" prefHeight="420.0" prefWidth="900.0">
+              <columns>
+                <TableColumn fx:id="id_column_employee" prefWidth="32.00000071525574" text="ID" />
+                <TableColumn fx:id="last_name_column" prefWidth="82.39999008178711" text="Фамилия" />
+                  <TableColumn fx:id="first_name_column" prefWidth="89.5999755859375" text="Имя" />
+                  <TableColumn fx:id="patronymic_column" prefWidth="95.20002746582031" text="Отчество" />
+                  <TableColumn fx:id="position_column" minWidth="8.79998779296875" prefWidth="96.79998779296875" text="Должность" />
+                  <TableColumn fx:id="experience_column" minWidth="1.5999755859375" prefWidth="85.5999755859375" text="Опыт работы" />
+                  <TableColumn fx:id="startWork_column" prefWidth="112.0" text="Начало работы" />
+                  <TableColumn fx:id="telephone_column" prefWidth="72.00006103515625" text="Телефон" />
+                  <TableColumn fx:id="email_column" prefWidth="99.99993896484375" text="Эл. почта" />
+                  <TableColumn fx:id="timeWork_column" prefWidth="132.800048828125" text="Кол-во часов работы" />
+              </columns>
+            </TableView>
+            <AnchorPane layoutY="419.0" prefHeight="126.0" prefWidth="900.0" style="-fx-background-color: #ff9932;">
+               <children>
+                  <Button fx:id="button_exit_byUser" layoutX="735.0" layoutY="73.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="144.0" style="-fx-background-color: #2E3348;" text="Выход" textFill="#fafafa">
+                     <font>
+                        <Font name="Corbel" size="24.0" />
+                     </font>
+                  </Button>
+                  <ImageView fitHeight="100.0" fitWidth="114.0" layoutX="13.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/something.png" />
+                     </image>
+                  </ImageView>
+                  <TextField fx:id="field_unCorrect_byUser" layoutX="144.0" layoutY="60.0" prefHeight="28.0" prefWidth="273.0" style="-fx-background-color: #ff9932;">
+                     <font>
+                        <Font name="Corbel" size="15.0" />
+                     </font>
+                  </TextField>
+                  <Button fx:id="button_change_department" layoutX="11.0" layoutY="70.0" mnemonicParsing="false" onAction="#ShowDialogChangeDepartment" prefHeight="44.0" prefWidth="266.0" style="-fx-background-color: #2E3348;" text="Кадровые переводы" textFill="#fafafa">
+                     <font>
+                        <Font name="Corbel" size="24.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="button_calc_salary" layoutX="287.0" layoutY="71.0" mnemonicParsing="false" onAction="#ShowDialogSalary" prefHeight="44.0" prefWidth="44.0" style="-fx-background-color: red;" textFill="#fafafa">
+                     <font>
+                        <Font name="Corbel" size="24.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../image/money.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="button_list_sick" layoutX="350.0" layoutY="71.0" mnemonicParsing="false" onAction="#ShowDialogSick" prefHeight="44.0" prefWidth="44.0" style="-fx-background-color: red;" textFill="#fafafa">
+                     <font>
+                        <Font name="Corbel" size="24.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../image/sick.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="button_vacation" layoutX="415.0" layoutY="71.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="44.0" style="-fx-background-color: red;" textFill="#fafafa">
+                     <font>
+                        <Font name="Corbel" size="24.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../image/vacation.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+            </AnchorPane>
+         </children>
+        </AnchorPane>
+        <Line endX="900.0000610351562" endY="535.0" layoutY="9.0" startY="535.0" stroke="#2e3348" strokeWidth="3.0" />
+        <Button fx:id="button_view_byUser" layoutX="38.0" layoutY="14.0" mnemonicParsing="false" style="-fx-background-color: #2E3348;" text="Просмотр" textFill="#fafafa">
+            <font>
+                <Font name="Corbel" size="24.0" />
+            </font>
+        </Button>
+        <Button fx:id="button_add_byUser" layoutX="181.0" layoutY="13.0" mnemonicParsing="false" onAction="#ShowDialog" style="-fx-background-color: #2E3348;" text="Добавить" textFill="#fafafa">
+            <font>
+                <Font name="Corbel" size="24.0" />
+            </font>
+        </Button>
+        <Button fx:id="button_edit_byUser" layoutX="317.0" layoutY="12.0" mnemonicParsing="false" onAction="#ShowDialogForEdit" style="-fx-background-color: #2E3348;" text="Редактировать" textFill="#fafafa">
+            <font>
+                <Font name="Corbel" size="24.0" />
+            </font>
+        </Button>
+        <Button fx:id="button_delete_byUser" layoutX="508.0" layoutY="11.0" mnemonicParsing="false" style="-fx-background-color: #2E3348;" text="Удалить" textFill="#fafafa">
+            <font>
+                <Font name="Corbel" size="24.0" />
+            </font>
+        </Button>
+      <TextField fx:id="filterField" layoutX="639.0" layoutY="20.0" prefHeight="28.0" prefWidth="235.0" promptText="Поиск" style="-fx-background-color: #fafafa;">
+         <font>
+            <Font name="Corbel Italic" size="15.0" />
+         </font></TextField>
+      <Button fx:id="button_otchet" layoutX="4.0" layoutY="4.0" mnemonicParsing="false" onAction="#ShowDialogForSaving" style="-fx-background-color: #2E3348;">
+         <graphic>
+            <ImageView fitHeight="32.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/save.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+    </children>
+</AnchorPane>
